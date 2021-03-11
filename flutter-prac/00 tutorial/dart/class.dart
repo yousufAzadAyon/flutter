@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  var person = Person(name: 'ayon', age: 24, height: 1.8);
+  var person = Person(name: 'yousuf', age: 24, height: 1.8);
   print(person.describe());
 
 }
@@ -13,7 +13,7 @@ class Person{
     }
   );
   
-  var name;
+  final name;
   final age;
   final height;
 
