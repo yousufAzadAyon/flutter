@@ -13,8 +13,10 @@ class XylophoneApp extends StatelessWidget {
 
   Expanded makeKeys({Color color, int soundNumber}) {
     return Expanded(
-      child: FlatButton(
-        color: color,
+      child: TextButton(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(color)
+        ),
         onPressed: () {
           playSound(soundNumber);
         },
