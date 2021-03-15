@@ -42,7 +42,7 @@ class _DicePageState extends State<DicePage> {
       child: Row(
         children: [
           Expanded(
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 changeDiceFace();
               },
@@ -50,7 +50,7 @@ class _DicePageState extends State<DicePage> {
             ),
           ),
           Expanded(
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 changeDiceFace();
               },
