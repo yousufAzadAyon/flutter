@@ -1,9 +1,9 @@
-import 'dart:ffi';
 
-void main(List<String> args) {
+void main() {
   var person = Person(name: 'yousuf', age: 24, height: 1.8);
   var employee = Employee(salary: 1000000, taxCode: 'exrt44re');
-  print(employee.salary);
+  print(person.describe());
+  print(employee.sayName());
 
 
 }
@@ -17,9 +17,10 @@ class Person{
     }
   );
   
-  final String? name;
-  final int? age;
-  final double? height;
+  var name;
+  var age;
+  var height;
+
   String sayName()=>'hello my name is $name';
   String describe()=>'im $age, and height is $height';
 
@@ -28,10 +29,14 @@ class Person{
 class Employee extends Person{
   Employee(
     {
+      var name,
+      var age,
+      var height,
       this.taxCode,
       this.salary
     }
-  );
+  )
+  : super(name: name, age: age, height: height);
   var taxCode;
   var salary;
 
